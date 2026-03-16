@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蟹源 - 源自自然，助农兴乡</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <img src="images/product8.png" alt="蟹源" style="width: 50px; height: auto;">
+                </div>
+                <span class="logo-text">蟹源</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#brand" class="nav-link">品牌故事</a></li>
+                <li><a href="#growth" class="nav-link">生长历程</a></li>
+                <li><a href="#products" class="nav-link">产品中心</a></li>
+                <li><a href="#nutrition" class="nav-link">营养与食用</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 购物车侧边栏 -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> 购物车</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-basket"></i>
+                <p>购物车是空的</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>总计：</span>
+                <span class="total-price" id="totalPrice">¥0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">立即结算</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Hero区域 -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="wave-animation">
+                <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-leaf"></i>
+                <span>助农兴乡 · 生态养殖</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-main">蟹源</span>
+                <span class="title-sub">源自自然，品质传承</span>
+            </h1>
+            <p class="hero-desc">每一只螃蟹都承载着蟹农的匠心与期盼，从育苗到成熟，我们用心守护每一个生长瞬间</p>
+            <div class="hero-actions">
+                <a href="#products" class="btn btn-primary">
+                    <i class="fas fa-shopping-bag"></i>
+                    立即选购
+                </a>
+                <a href="#brand" class="btn btn-secondary">
+                    <i class="fas fa-play-circle"></i>
+                    了解品牌
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="6000">0</span>
+                    <span class="stat-unit">万+</span>
+                    <span class="stat-label">销售额</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="88">0</span>
+                    <span class="stat-unit">%+</span>
+                    <span class="stat-label">复购率</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="365">0</span>
+                    <span class="stat-unit">天</span>
+                    <span class="stat-label">生态养殖</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>向下滚动</span>
+        </div>
+    </section>
+
+    <!-- IP成长理念模块 -->
+    <section class="brand-section" id="brand">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">品牌故事</span>
+                <h2 class="section-title">蟹源 · 助农使命</h2>
+                <p class="section-desc">连接田间与餐桌，让每一份鲜美都传递温暖</p>
+            </div>
+            
+            <div class="brand-story">
+                <div class="story-visual">
+                    <div class="story-image-wrapper">
+                        <div class="story-image main-image">
+                            <img src="images/product9.png" alt="智慧螃蟹养殖助农基地" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="floating-card card-1">
+                            <i class="fas fa-award"></i>
+                            <span>有机认证</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <span>助农项目</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>冷链直达</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-content">
+                    <div class="story-block">
+                        <div class="block-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>创立初心</h3>
+                        <p>蟹源诞生于对土地的热爱和对农民的敬意。我们深入江苏、浙江等优质蟹产区，与当地蟹农建立深度合作，致力于将最地道的大闸蟹带给每一位消费者。</p>
+                    </div>
+                    <div class="story-block">
+                        <div class="block-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>核心价值观</h3>
+                        <p>诚信、品质、助农。我们坚持生态养殖，拒绝催熟剂，让每一只螃蟹都自然成熟。同时，通过直接采购帮助蟹农获得更好的收益。</p>
+                    </div>
+                    <div class="story-block">
+                        <div class="block-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>科技赋能</h3>
+                        <p>坚持生态养殖、拒绝催熟，采用底质改良与循环水智能养护技术，以科技守护水环境，将生态优势转化为蟹农增收实效，发展绿色可持续现代农业。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="brand-values">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>生态养殖</h4>
+                    <p>天然水域，科学喂养，零添加</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>助农兴乡</h4>
+                    <p>直接采购，让利于农，共同富裕</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>品质保证</h4>
+                    <p>严格筛选，死蟹包赔，售后无忧</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h4>鲜活直达</h4>
+                    <p>冷链物流，24小时内送达</p>
+                </div>
+            </div>
+
+            <div class="brand-slogan">
+                <blockquote>
+                    <i class="fas fa-quote-left"></i>
+                    <p>源自自然，助农兴乡<br>让每一只螃蟹都成为连接城乡的桥梁</p>
+                    <i class="fas fa-quote-right"></i>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI螃蟹生长展示模块 -->
+    <section class="growth-section" id="growth">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">生长历程</span>
+                <h2 class="section-title">AI可视化 · 螃蟹成长的一生</h2>
+                <p class="section-desc">探索从育苗到成熟的奇妙旅程，见证生命的蜕变</p>
+            </div>
+
+            <div class="growth-showcase">
+                <div class="growth-visual">
+                    <div class="crab-display" id="crabDisplay">
+                        <div class="crab-stage active" data-stage="1">
+                            <div class="stage-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-egg"></i>
+                                    <span>蟹卵期</span>
+                                </div>
+                            </div>
+                            <div class="stage-info">
+                                <span class="stage-number">01</span>
+                                <h4>受精卵期</h4>
+                                <p>母蟹产卵，每只可产数十万粒卵</p>
+                            </div>
+                        </div>
+                        <div class="crab-stage" data-stage="2">
+                            <div class="stage-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-baby"></i>
+                                    <span>溞状幼体</span>
+                                </div>
+                            </div>
+                            <div class="stage-info">
+                                <span class="stage-number">02</span>
+                                <h4>溞状幼体期</h4>
+                                <p>孵化后经历5次蜕皮，约20天</p>
+                            </div>
+                        </div>
+                        <div class="crab-stage" data-stage="3">
+                            <div class="stage-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-fish"></i>
+                                    <span>大眼幼体</span>
+                                </div>
+                            </div>
+                            <div class="stage-info">
+                                <span class="stage-number">03</span>
+                                <h4>大眼幼体期</h4>
+                                <p>开始具备螃蟹形态，准备上岸</p>
+                            </div>
+                        </div>
+                        <div class="crab-stage" data-stage="4">
+                            <div class="stage-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-paw"></i>
+                                    <span>幼蟹期</span>
+                                </div>
+                            </div>
+                            <div class="stage-info">
+                                <span class="stage-number">04</span>
+                                <h4>幼蟹培育期</h4>
+                                <p>放入蟹塘，开始淡水生活</p>
+                            </div>
+                        </div>
+                        <div class="crab-stage" data-stage="5">
+                            <div class="stage-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-water"></i>
+                                    <span>成蟹期</span>
+                                </div>
+                            </div>
+                            <div class="stage-info">
+                                <span class="stage-number">05</span>
+                                <h4>成蟹养殖期</h4>
+                                <p>经历多次蜕壳，逐渐长大</p>
+                            </div>
+                        </div>
+                        <div class="crab-stage" data-stage="6">
+                            <div class="stage-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-crown"></i>
+                                    <span>成熟蟹</span>
+                                </div>
+                            </div>
+                            <div class="stage-info">
+                                <span class="stage-number">06</span>
+                                <h4>成熟收获期</h4>
+                                <p>膏满黄肥，达到最佳食用状态</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="growth-progress">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+
+                <div class="growth-timeline">
+                    <div class="timeline-item active" data-stage="1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2-3月</span>
+                            <h4>受精卵孵化</h4>
+                            <p>水温升至10°C以上，母蟹开始产卵。每只母蟹可产20-80万粒卵，粘附在腹部腹肢上孵化。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-stage="2">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">4-5月</span>
+                            <h4>溞状幼体发育</h4>
+                            <p>经历5期溞状幼体阶段，每期约3-5天。幼体在海水中浮游生活，以浮游生物为食。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-stage="3">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">5-6月</span>
+                            <h4>大眼幼体变态</h4>
+                            <p>溞状幼体变态为大眼幼体，具备更强的游泳能力，开始向河口洄游。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-stage="4">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">6-7月</span>
+                            <h4>幼蟹培育</h4>
+                            <p>大眼幼体变态为幼蟹，进入淡水环境。开始投喂配合饲料和天然饵料。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-stage="5">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">8-9月</span>
+                            <h4>成蟹养殖</h4>
+                            <p>幼蟹经历5-7次蜕壳，体重快速增长。科学投喂，保持水质，预防病害。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-stage="6">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">10-11月</span>
+                            <h4>成熟收获</h4>
+                            <p>螃蟹性腺发育成熟，膏满黄肥。经过严格筛选，冷链配送至您的餐桌。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ecology-features">
+                <h3 class="features-title">生态养殖环境</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h4>优质水源</h4>
+                        <p>引用天然湖泊水，定期检测水质，确保PH值、溶氧量达标</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4>生态饵料</h4>
+                        <p>投喂小鱼、螺蛳、玉米等天然饵料，拒绝人工激素</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <h4>温度监控</h4>
+                        <p>智能温控系统，实时监测水温变化，创造最佳生长环境</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>病害防控</h4>
+                        <p>生态防治为主，定期消毒，确保螃蟹健康成长</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品购买模块 -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">产品中心</span>
+                <h2 class="section-title">精选好蟹 · 品质之选</h2>
+                <p class="section-desc">从田间到餐桌，每一只都是匠心之选</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- 产品1：限量典藏版 -->
+                <div class="product-card featured" data-id="1" data-name="蟹玺·NO.001 限量典藏版大闸蟹" data-price="888" data-image="images/product1.jpg">
+                    <div class="product-badge">限量典藏</div>
+                    <div class="product-image">
+                        <img src="images/product1.jpg" alt="蟹玺·NO.001 限量典藏版大闸蟹" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'fas fa-crown\'></i><span>限量典藏</span></div>'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">蟹玺·NO.001</h3>
+                        <p class="product-subtitle">限量典藏版大闸蟹</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-certificate"></i> 专属编号</span>
+                            <span><i class="fas fa-gift"></i> 精美礼盒</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="price">¥<strong>888</strong></span>
+                            <button class="add-to-cart-btn" onclick="addToCart(1)">
+                                <i class="fas fa-cart-plus"></i>
+                                立即购买
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品2：生态款 -->
+                <div class="product-card" data-id="2" data-name="大闸蟹·DNA-001 生态款" data-price="666" data-image="images/product2.jpg">
+                    <div class="product-badge eco">生态优选</div>
+                    <div class="product-image">
+                        <img src="images/product2.jpg" alt="大闸蟹·DNA-001 生态款" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'fas fa-leaf\'></i><span>生态款</span></div>'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">大闸蟹·DNA-001</h3>
+                        <p class="product-subtitle">生态款</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-dna"></i> 基因优选</span>
+                            <span><i class="fas fa-leaf"></i> 生态养殖</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="price">¥<strong>666</strong></span>
+                            <button class="add-to-cart-btn" onclick="addToCart(2)">
+                                <i class="fas fa-cart-plus"></i>
+                                立即购买
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品3：五两母六两公礼盒版 -->
+                <div class="product-card" data-id="3" data-name="五两母 六两公 四公四母（礼盒版）" data-price="799" data-image="images/product3.jpg">
+                    <div class="product-badge hot">热销爆款</div>
+                    <div class="product-image">
+                        <img src="images/product3.jpg" alt="五两母 六两公 四公四母（礼盒版）" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'fas fa-box-open\'></i><span>礼盒版</span></div>'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">五两母 六两公</h3>
+                        <p class="product-subtitle">四公四母（礼盒版）</p>
+                        <div class="product-specs">
+                            <span class="spec">母蟹5两×4只</span>
+                            <span class="spec">公蟹6两×4只</span>
+                        </div>
+                        <div class="product-features">
+                            <span><i class="fas fa-gift"></i> 含精美礼盒</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="price">¥<strong>799</strong></span>
+                            <button class="add-to-cart-btn" onclick="addToCart(3)">
+                                <i class="fas fa-cart-plus"></i>
+                                立即购买
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品4：四两母五两公 -->
+                <div class="product-card" data-id="4" data-name="四两母 五两公 四公四母（需另购礼盒）" data-price="499" data-image="images/product4.jpg">
+                    <div class="product-image">
+                        <img src="images/product4.jpg" alt="四两母 五两公 四公四母" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'fas fa-utensils\'></i><span>家庭装</span></div>'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">四两母 五两公</h3>
+                        <p class="product-subtitle">四公四母（需另购礼盒）</p>
+                        <div class="product-specs">
+                            <span class="spec">母蟹4两×4只</span>
+                            <span class="spec">公蟹5两×4只</span>
+                        </div>
+                        <div class="product-features">
+                            <span class="gift-option">
+                                <input type="checkbox" id="gift4" class="gift-checkbox" data-product="4">
+                                <label for="gift4">加购礼盒 +¥58.8</label>
+                            </span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="price">¥<strong>499</strong></span>
+                            <button class="add-to-cart-btn" onclick="addToCart(4)">
+                                <i class="fas fa-cart-plus"></i>
+                                立即购买
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品5：二两母三两公 -->
+                <div class="product-card" data-id="5" data-name="二两母三两公任选十只装（需另购礼盒）" data-price="258" data-image="images/product5.jpg">
+                    <div class="product-badge value">超值精选</div>
+                    <div class="product-image">
+                        <img src="images/product5.jpg" alt="二两母三两公任选十只装" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'fas fa-star\'></i><span>经济装</span></div>'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">二两母三两公</h3>
+                        <p class="product-subtitle">任选十只装（需另购礼盒）</p>
+                        <div class="product-specs">
+                            <span class="spec">母蟹2两 / 公蟹3两</span>
+                            <span class="spec">任选10只</span>
+                        </div>
+                        <div class="product-features">
+                            <span class="gift-option">
+                                <input type="checkbox" id="gift5" class="gift-checkbox" data-product="5">
+                                <label for="gift5">加购礼盒 +¥58.8</label>
+                            </span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="price">¥<strong>258</strong></span>
+                            <button class="add-to-cart-btn" onclick="addToCart(5)">
+                                <i class="fas fa-cart-plus"></i>
+                                立即购买
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品6：蟛蜞 -->
+                <div class="product-card" data-id="6" data-name="蟛蜞" data-price="20" data-unit="斤" data-image="images/product6.jpg">
+                    <div class="product-image">
+                        <img src="images/product6.jpg" alt="蟛蜞" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'fas fa-fish\'></i><span>蟛蜞</span></div>'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">蟛蜞</h3>
+                        <p class="product-subtitle">鲜活美味，家常首选</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-check-circle"></i> 鲜活保证</span>
+                            <span><i class="fas fa-truck"></i> 批量发货</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="price">¥<strong>20</strong><small>/斤</small></span>
+                            <button class="add-to-cart-btn" onclick="addToCart(6)">
+                                <i class="fas fa-cart-plus"></i>
+                                立即购买
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品7：精品礼盒 -->
+                <div class="product-card gift-card" data-id="7" data-name="精品礼盒" data-price="58.8" data-image="images/product7.jpg">
+                    <div class="product-badge gift">精美礼盒</div>
+                    <div class="product-image">
+                        <img src="images/product7.jpg" alt="精品礼盒" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><i class=\'fas fa-gift\'></i><span>精品礼盒</span></div>'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">精品礼盒</h3>
+                        <p class="product-subtitle">高端包装，送礼首选</p>
+                        <div class="product-features">
+                            <span><i class="fas fa-box"></i> 保温包装</span>
+                            <span><i class="fas fa-snowflake"></i> 冰袋保鲜</span>
+                            <span><i class="fas fa-tools"></i> 附赠工具</span>
+                        </div>
+                        <div class="product-price-row">
+                            <span class="price">¥<strong>58.8</strong></span>
+                            <button class="add-to-cart-btn" onclick="addToCart(7)">
+                                <i class="fas fa-cart-plus"></i>
+                                立即购买
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 螃蟹营养价值与食用方法模块 -->
+    <section class="nutrition-section" id="nutrition">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">营养与食用</span>
+                <h2 class="section-title">品味蟹韵 · 健康之选</h2>
+                <p class="section-desc">科学营养搭配，尽享鲜美滋味</p>
+            </div>
+
+            <div class="nutrition-content">
+                <!-- 营养价值 -->
+                <div class="nutrition-panel">
+                    <h3 class="panel-title">
+                        <i class="fas fa-heartbeat"></i>
+                        营养价值
+                    </h3>
+                    <div class="nutrition-grid">
+                        <div class="nutrition-item">
+                            <div class="nutrition-icon">
+                                <i class="fas fa-drumstick-bite"></i>
+                            </div>
+                            <div class="nutrition-info">
+                                <h4>优质蛋白质</h4>
+                                <span class="nutrition-value">15-20g/100g</span>
+                                <p>含有人体必需的8种氨基酸，易于吸收</p>
+                            </div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-icon">
+                                <i class="fas fa-oil-can"></i>
+                            </div>
+                            <div class="nutrition-info">
+                                <h4>不饱和脂肪酸</h4>
+                                <span class="nutrition-value">2-3g/100g</span>
+                                <p>富含EPA和DHA，有益心脑血管健康</p>
+                            </div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <div class="nutrition-info">
+                                <h4>钙与磷</h4>
+                                <span class="nutrition-value">120mg/100g</span>
+                                <p>强化骨骼，促进牙齿健康</p>
+                            </div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="nutrition-info">
+                                <h4>维生素群</h4>
+                                <span class="nutrition-value">丰富</span>
+                                <p>维生素A、B族、E，增强免疫力</p>
+                            </div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-icon">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <div class="nutrition-info">
+                                <h4>微量元素</h4>
+                                <span class="nutrition-value">铁锌硒</span>
+                                <p>补充人体所需微量元素</p>
+                            </div>
+                        </div>
+                        <div class="nutrition-item">
+                            <div class="nutrition-icon">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <div class="nutrition-info">
+                                <h4>蟹黄营养</h4>
+                                <span class="nutrition-value">高能量</span>
+                                <p>富含卵磷脂，益智健脑</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 食用方法 -->
+                <div class="eating-guide">
+                    <h3 class="panel-title">
+                        <i class="fas fa-utensils"></i>
+                        食用指南
+                    </h3>
+                    
+                    <div class="guide-tabs">
+                        <button class="tab-btn active" data-tab="parts">
+                            <i class="fas fa-th-large"></i>
+                            部位解析
+                        </button>
+                        <button class="tab-btn" data-tab="recipes">
+                            <i class="fas fa-book-open"></i>
+                            经典菜谱
+                        </button>
+                        <button class="tab-btn" data-tab="tips">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            食用禁忌
+                        </button>
+                        <button class="tab-btn" data-tab="storage">
+                            <i class="fas fa-snowflake"></i>
+                            保鲜技巧
+                        </button>
+                    </div>
+
+                    <div class="tab-content active" id="parts">
+                        <div class="crab-parts">
+                            <div class="part-item">
+                                <div class="part-image">
+                                    <div class="image-placeholder small">
+                                        <i class="fas fa-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="part-info">
+                                    <h4>蟹黄/蟹膏</h4>
+                                    <p>母蟹为蟹黄，橙红色；公蟹为蟹膏，白色半透明。富含蛋白质、脂肪，味道最鲜美。</p>
+                                    <span class="part-taste"><i class="fas fa-star"></i> 推荐指数：★★★★★</span>
+                                </div>
+                            </div>
+                            <div class="part-item">
+                                <div class="part-image">
+                                    <div class="image-placeholder small">
+                                        <i class="fas fa-grip-lines"></i>
+                                    </div>
+                                </div>
+                                <div class="part-info">
+                                    <h4>蟹肉</h4>
+                                    <p>蟹身和蟹腿中的白色肉质，富含蛋白质和微量元素，口感细嫩鲜甜。</p>
+                                    <span class="part-taste"><i class="fas fa-star"></i> 推荐指数：★★★★★</span>
+                                </div>
+                            </div>
+                            <div class="part-item">
+                                <div class="part-image">
+                                    <div class="image-placeholder small">
+                                        <i class="fas fa-times-circle"></i>
+                                    </div>
+                                </div>
+                                <div class="part-info">
+                                    <h4>不可食用部位</h4>
+                                    <p>蟹胃（位于蟹黄中的三角包）、蟹肠（黑色条状）、蟹腮（两侧像眉毛的软物）、蟹心（六角形白色）</p>
+                                    <span class="part-taste warning"><i class="fas fa-ban"></i> 请勿食用</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="recipes">
+                        <div class="recipe-cards">
+                            <div class="recipe-card">
+                                <div class="recipe-image">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-fire"></i>
+                                    </div>
+                                </div>
+                                <div class="recipe-info">
+                                    <h4>清蒸大闸蟹</h4>
+                                    <p class="recipe-desc">最经典的吃法，保留原汁原味</p>
+                                    <div class="recipe-steps">
+                                        <span>1. 螃蟹洗净，肚皮朝上放入蒸锅</span>
+                                        <span>2. 姜片铺在蟹身上，去腥提鲜</span>
+                                        <span>3. 大火蒸15-20分钟</span>
+                                        <span>4. 蘸姜醋汁食用</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recipe-card">
+                                <div class="recipe-image">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-pepper-hot"></i>
+                                    </div>
+                                </div>
+                                <div class="recipe-info">
+                                    <h4>香辣蟹</h4>
+                                    <p class="recipe-desc">川味经典，麻辣鲜香</p>
+                                    <div class="recipe-steps">
+                                        <span>1. 螃蟹切块，裹淀粉油炸</span>
+                                        <span>2. 爆香干辣椒、花椒、葱姜蒜</span>
+                                        <span>3. 放入螃蟹翻炒，加料酒、生抽</span>
+                                        <span>4. 撒香菜出锅</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recipe-card">
+                                <div class="recipe-image">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-bowl-rice"></i>
+                                    </div>
+                                </div>
+                                <div class="recipe-info">
+                                    <h4>蟹黄豆腐</h4>
+                                    <p class="recipe-desc">江浙名菜，鲜美滑嫩</p>
+                                    <div class="recipe-steps">
+                                        <span>1. 取出蟹黄，豆腐切块焯水</span>
+                                        <span>2. 热油爆香姜末，下蟹黄炒散</span>
+                                        <span>3. 加高汤、豆腐炖煮</span>
+                                        <span>4. 勾芡撒葱花</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="tips">
+                        <div class="warning-list">
+                            <div class="warning-item">
+                                <i class="fas fa-ban"></i>
+                                <div>
+                                    <h4>不宜人群</h4>
+                                    <p>孕妇、过敏体质、痛风患者、脾胃虚寒者慎食</p>
+                                </div>
+                            </div>
+                            <div class="warning-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>食用时间</h4>
+                                    <p>避免空腹食用，不宜与柿子、浓茶、冷饮同食</p>
+                                </div>
+                            </div>
+                            <div class="warning-item">
+                                <i class="fas fa-temperature-high"></i>
+                                <div>
+                                    <h4>死蟹禁食</h4>
+                                    <p>螃蟹死后体内细菌快速繁殖，产生毒素，绝对不可食用</p>
+                                </div>
+                            </div>
+                            <div class="warning-item">
+                                <i class="fas fa-wine-bottle"></i>
+                                <div>
+                                    <h4>搭配建议</h4>
+                                    <p>可搭配黄酒、姜茶，有助于驱寒暖胃</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="storage">
+                        <div class="storage-methods">
+                            <div class="storage-card">
+                                <div class="storage-icon">
+                                    <i class="fas fa-snowflake"></i>
+                                </div>
+                                <h4>冰箱冷藏法</h4>
+                                <p>将螃蟹放入保鲜盒，湿毛巾覆盖，可保存2-3天。温度保持在5-8°C。</p>
+                            </div>
+                            <div class="storage-card">
+                                <div class="storage-icon">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <h4>水养保存法</h4>
+                                <p>将螃蟹放入浅水盆中，水位不超过蟹身一半，放置阴凉处，可存活3-5天。</p>
+                            </div>
+                            <div class="storage-card">
+                                <div class="storage-icon">
+                                    <i class="fas fa-ice-cream"></i>
+                                </div>
+                                <h4>熟蟹保存</h4>
+                                <p>蒸熟后的螃蟹冷藏可保存1-2天，再次食用需彻底加热。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span>蟹源</span>
+                    </div>
+                    <p class="footer-slogan">源自自然，助农兴乡</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>关于我们</h4>
+                        <ul>
+                            <li><a href="#brand">品牌故事</a></li>
+                            <li><a href="#">助农项目</a></li>
+                            <li><a href="#">企业资质</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>产品服务</h4>
+                        <ul>
+                            <li><a href="#products">产品中心</a></li>
+                            <li><a href="#">定制服务</a></li>
+                            <li><a href="#">企业团购</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>客户服务</h4>
+                        <ul>
+                            <li><a href="#">售后政策</a></li>
+                            <li><a href="#">配送说明</a></li>
+                            <li><a href="#">常见问题</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>联系我们</h4>
+                    <p><i class="fas fa-phone"></i> 18160831503</p>
+                    <p><i class="fas fa-envelope"></i> fangjiahui06@163.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 安徽省蟹源基地</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 蟹源 版权所有 | 助农兴乡，品质传承</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
